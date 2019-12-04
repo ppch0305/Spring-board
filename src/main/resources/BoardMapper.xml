@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardMapper">
+
+	<select id="selectAll" resultType="BoardDTO">
+		select * from board order by seq desc
+	</select>
+
+	<select id="selectBoard" resultType="BoardDTO" parameterType="int">
+		select * from board where seq=#{seq}
+	</select>
+	
+</mapper>
